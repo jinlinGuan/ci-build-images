@@ -22,7 +22,7 @@ RUN apk add --update --no-cache \
 ENV DOCKER_CONFIG=/usr/local/lib/docker/cli-plugins
 
 RUN mkdir -p $DOCKER_CONFIG
-RUN curl -v -SL "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-linux-$(uname -m)" -o $DOCKER_CONFIG/docker-compose \
+RUN curl -v -SL "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-$(uname -m)" -o $DOCKER_CONFIG/docker-compose \
     && chmod +x $DOCKER_CONFIG/docker-compose \
     && docker compose version
 COPY ./docker-compose-shim /usr/local/bin/docker-compose
