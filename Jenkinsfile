@@ -21,5 +21,6 @@ edgeXBuildDocker ([
     dockerNamespace: 'edgex-devops',
     dockerNexusRepo: 'snapshots',
     dockerTags: ["2.33.1"],
+    pushImage: false,
     releaseBranchOverride: 'edgex-compose'
 ])
